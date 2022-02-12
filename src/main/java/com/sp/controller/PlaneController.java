@@ -21,11 +21,10 @@ public class PlaneController {
 	private PlaneService service;
 	
 	
-	
 	@GetMapping("/all")
 	public ResponseEntity<List<Planes>> getListOfPlanes(){
 		 List<Planes> listOfPlanes = service.getListOfPlanes();
-		 
+		 System.out.println(listOfPlanes);
 		 return new ResponseEntity<List<Planes>>(listOfPlanes,HttpStatus.OK); 
 	}
 	
